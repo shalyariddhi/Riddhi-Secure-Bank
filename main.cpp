@@ -119,7 +119,3 @@ int main() {
     std::cout << "Goodbye, " << name << "!" << std::endl;
     return 0;
 }
-
-    
-    return 0;
-}
