@@ -43,11 +43,10 @@ int main() {
     std::cout << "      RIDDHI SECURE BANK      " << std::endl;
     std::cout << "==============================" << std::endl;
 
-    // --- STEP 1: PIN REGISTRATION OR LOGIN ---
     std::ifstream pinFileIn("pin.txt");
     
     if (!pinFileIn.is_open()) {
-        // First time running the app: Register PIN
+        
         std::cout << "No User Found. Please register a 4-digit PIN: ";
         std::cin >> savedPIN;
         
@@ -56,7 +55,7 @@ int main() {
         pinFileOut.close();
         std::cout << "PIN Registered Successfully!\n" << std::endl;
     } else {
-        // Returning User: Load the PIN
+        
         pinFileIn >> savedPIN;
         pinFileIn.close();
 
@@ -78,20 +77,20 @@ int main() {
         }
     }
 
-    // --- STEP 2: LOAD BALANCE ---
+    
     std::ifstream inFile("balance.txt");
     if (inFile.is_open()) {
         inFile >> balance;
         inFile.close();
     }
 
-    // Clear buffer for name input
+    
     std::cin.ignore(); 
     std::cout << "Enter Account Holder Name: ";
     std::getline(std::cin, name);
     std::cout << std::fixed << std::setprecision(2);
 
-    // --- STEP 3: MAIN MENU LOOP ---
+    
     do {
         showMenu();
         if (!(std::cin >> choice)) {
@@ -110,7 +109,7 @@ int main() {
         }
     } while (choice != 4);
 
-    // --- STEP 4: SAVE BALANCE ---
+    
     std::ofstream outFile("balance.txt");
     if (outFile.is_open()) {
         outFile << balance;
@@ -118,5 +117,9 @@ int main() {
     }
 
     std::cout << "Goodbye, " << name << "!" << std::endl;
+    return 0;
+}
+
+    
     return 0;
 }
