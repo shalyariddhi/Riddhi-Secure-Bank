@@ -1,0 +1,12 @@
+# Compiled files
+*.exe
+*.out
+*.o
+
+# Runtime data
+pin.txt
+balance.txt
+
+# OS files
+.DS_Store
+Thumbs.db
