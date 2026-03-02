@@ -1,0 +1,6 @@
+*.exe
+*.out
+*.o
+pin.txt
+balance.txt
+.vscode/
