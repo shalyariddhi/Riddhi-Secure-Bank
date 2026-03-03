@@ -1,6 +1,6 @@
 # Riddhi Secure Bank (C++ CLI Project)
 
-A simple command-line banking system built using C++.  
+A simple command-line banking system built using C++.
 This project simulates basic banking operations with file-based data persistence.
 
 ## Features
